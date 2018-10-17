@@ -40,7 +40,7 @@ Furthermore following additional python packages are required:
 
 ## Running the train file
 
-Zum Training eines Agenten sollte die Datei [train.py](run/train.py) über die Konsole ausgeführt werden. \
+For agent training you should run the file [train.py](run/train.py) using the console. \
 For example:
 ```
 python ~/path/to/file/run/train.py -at "clipping" -v 1
