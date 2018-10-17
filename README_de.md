@@ -137,12 +137,13 @@ Preisentwicklungen und der Korrelationen der ETFs können den nachfolgenden Abbi
 
 ##### Wertentwicklung der einzelnen Anlagen 
 ![Anlagen Preise](img/asset_data.png)
-##### ETF Preisentwicklungs-Korrelationen
+##### ETF Korrelationsmatrix
 ![Anlagen Heatmap](img/asset_heatmap.png)
 
 ### Testresultate
 Die hier vorgestellten Ergebnisse beziehen sich auf unterschiedlichste Agentenkonfigurationen. Die *Buy-and-Hold* 
-Strategie (BaH) stellt den Benchmark dar. 
+Strategie (BaH) stellt den Benchmark dar. Ber der BaH Strategie fallen keine Transaktionskosten an, bei a
+ktivem Management hingegen schon relativ zur Höhe der Transaktion.
 ##### Durchschnittlicher Portfolioreturn bei diskreter Aktionswahl
 ![value_diskret](img/value_diskret.png)
 ##### Durchschnittlicher Portfolioreturn bei stetiger Aktionswahl
@@ -150,8 +151,10 @@ Strategie (BaH) stellt den Benchmark dar.
 
 ### Trainingsresultate
 Im Nachfolgenden sind zur Veranschaulichung die Trainingserfolge der am besten performenden Agenten abgebildet.  
+Hierbei beziehen sich die Ergebnisse auf die durchschnittlichen Werte der Trainingsepochen bestehend aus mehreren 
+Trainingsepisoden.
 
-##### Durchschnittlicher Portfolioreturn bei diskreter Aktionswahl
+##### Durchschnittliche Trainingsepisodenergebnisse bei diskreter Aktionswahl
 ![lineplots_diskret](img/lineplots_diskret.png)
-##### Durchschnittlicher Portfolioreturn bei stetiger Aktionswahl
+##### Durchschnittliche Trainingsepisodenergebnisse bei stetiger Aktionswahl
 ![lineplots_stetig](img/lineplots_stetig.png)
