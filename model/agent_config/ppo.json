@@ -1,0 +1,19 @@
+{
+    "type": "ppo_agent",
+    "batch_size": 30,
+    "batched_observe": 0,
+    "step_optimizer": {
+        "type": "adam",
+        "learning_rate": 1e-3
+    },
+
+    "discount": 0.99,
+
+    "entropy_regularization": null,
+    "gae_lambda": null,
+    "likelihood_ratio_clipping": 0.2,
+
+    "baseline_mode": null,
+    "baseline": null,
+    "baseline_optimizer": null
+}

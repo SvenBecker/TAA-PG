@@ -1,0 +1,22 @@
+{
+    "type": "vpg_agent",
+    "batch_size": 20,
+    "batched_observe": 0,
+    "optimizer": {
+        "type": "adam",
+        "learning_rate": 1e-3
+    },
+    "discount": 0.99,
+    "entropy_regularization": null,
+    "gae_lambda": null,
+    "baseline_mode": null,
+    "baseline":  null,
+    "baseline_optimizer": null,
+    "distributions_spec": {
+        "action": {
+            "type": "gaussian",
+            "mean": 0.5,
+            "log_stddev": -1.3
+        }
+    }
+}
