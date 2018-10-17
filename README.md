@@ -3,7 +3,7 @@
 
 # Reinforcement Learning for Tactical Asset Allocation
 
-This project contains the training and testing of multiple reinforcement learning agents given a protfolio management environment.
+This project contains the training and testing of multiple reinforcement learning agents given a portfolio management environment.
 > The interaction between environment and agent is given by: \
 > Environment <> Runner <> Agent <> Model
 
@@ -22,7 +22,7 @@ This project contains the training and testing of multiple reinforcement learnin
 
 ### Dependencies
 
-The proposed implementation happend mainly in python, therefor python version >=3.6 is required.
+The proposed implementation was done mainly in python, therefore python version >=3.6 is required.
 Furthermore following additional python packages are required:
 
 - h5py==2.7.1
@@ -105,9 +105,9 @@ The folder [saved_results](saved_results) contains multiple parameter constellat
 | -ss | -standardize-state | (bool) standardization or normalization of the state |
 
 ## TensorBoard
-The files [predictor.py](env/predictor.py), as well as [train.py](run/train.py) integrate
+The files [predictor.py](env/predictor.py) as well as [train.py](run/train.py) integrate
 [TensorBoard](https://github.com/tensorflow/tensorboard).
-TensorBoard can be started by typing
+TensorBoard can be loaded by typing
 ```
 tensorboard --logdir path/to/project/env/board
 tensorboard --logdir path/to/project/run/board
