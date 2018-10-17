@@ -128,3 +128,30 @@ Ende Februar 2018 gab es eine größeres [TensorForce](https://github.com/reinfo
 Update. Hier wird noch eine alte Version verwendet und eine Umstellung war zeitlich nicht 
 mehr möglich. Es kann somit bei Verwendung einer neueren Tensorforce Version eventuell zu 
 Konflikten kommen.
+
+## Experimentelle Details und Ergebnisse
+
+### Historische Daten 
+Für die Experimente wurden Exchange Traded Fund (ETF) Portfolios erstellt. Informationen bezüglich der 
+Preisentwicklungen und der Korrelationen der ETFs können den nachfolgenden Abbildungen entnommen werden.
+
+##### Wertentwicklung der einzelnen Anlagen 
+![Anlagen Preise](img/asset_data.png)
+##### ETF Preisentwicklungs-Korrelationen
+![Anlagen Heatmap](img/asset_heatmap.png)
+
+### Testresultate
+Die hier vorgestellten Ergebnisse beziehen sich auf unterschiedlichste Agentenkonfigurationen. Die *Buy-and-Hold* 
+Strategie (BaH) stellt den Benchmark dar. 
+##### Durchschnittlicher Portfolioreturn bei diskreter Aktionswahl
+![value_diskret](img/value_diskret.png)
+##### Durchschnittlicher Portfolioreturn bei stetiger Aktionswahl
+![value_stetig](img/value_stetig.png)
+
+### Trainingsresultate
+Im Nachfolgenden sind zur Veranschaulichung die Trainingserfolge der am besten performenden Agenten abgebildet.  
+
+##### Durchschnittlicher Portfolioreturn bei diskreter Aktionswahl
+![lineplots_diskret](img/lineplots_diskret.png)
+##### Durchschnittlicher Portfolioreturn bei stetiger Aktionswahl
+![lineplots_stetig](img/lineplots_stetig.png)
