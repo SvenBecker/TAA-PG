@@ -129,32 +129,6 @@ Update. Hier wird noch eine alte Version verwendet und eine Umstellung war zeitl
 mehr möglich. Es kann somit bei Verwendung einer neueren Tensorforce Version eventuell zu 
 Konflikten kommen.
 
-## Experimentelle Details und Ergebnisse
+## Credits
 
-### Historische Daten 
-Für die Experimente wurden Exchange Traded Fund (ETF) Portfolios erstellt. Informationen bezüglich der 
-Preisentwicklungen und der Korrelationen der ETFs können den nachfolgenden Abbildungen entnommen werden.
-
-##### Wertentwicklung der einzelnen Anlagen 
-![Anlagen Preise](img/asset_data.png)
-##### ETF Korrelationsmatrix
-![Anlagen Heatmap](img/asset_heatmap.png)
-
-### Testresultate
-Die hier vorgestellten Ergebnisse beziehen sich auf unterschiedlichste Agentenkonfigurationen. Die *Buy-and-Hold* 
-Strategie (BaH) stellt den Benchmark dar. Ber der BaH Strategie fallen keine Transaktionskosten an, bei a
-ktivem Management hingegen schon relativ zur Höhe der Transaktion.
-##### Durchschnittlicher Portfolioreturn bei diskreter Aktionswahl
-![value_diskret](img/value_diskret.png)
-##### Durchschnittlicher Portfolioreturn bei stetiger Aktionswahl
-![value_stetig](img/value_stetig.png)
-
-### Trainingsresultate
-Im Nachfolgenden sind zur Veranschaulichung die Trainingserfolge der am besten performenden Agenten abgebildet.  
-Hierbei beziehen sich die Ergebnisse auf die durchschnittlichen Werte der Trainingsepochen bestehend aus mehreren 
-Trainingsepisoden.
-
-##### Durchschnittliche Trainingsepisodenergebnisse bei diskreter Aktionswahl
-![lineplots_diskret](img/lineplots_diskret.png)
-##### Durchschnittliche Trainingsepisodenergebnisse bei stetiger Aktionswahl
-![lineplots_stetig](img/lineplots_stetig.png)
+- [TensorForce](https://github.com/reinforceio/tensorforce)

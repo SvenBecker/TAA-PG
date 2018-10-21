@@ -114,3 +114,7 @@ tensorboard --logdir path/to/project/run/board
 ```
 
 Got to localhost:6006 for the results.
+
+## Credits
+
+- [TensorForce](https://github.com/reinforceio/tensorforce)
