@@ -1,0 +1,1 @@
+{"Activation":"relu","Batch Size":30,"Decay Rate":0.1,"Dropout Rates":"(0.5, 0.3, 0.2, 0.4)","Epochs":4,"Epsilon":0.00001,"Layer Units":"(96, 48, 56, 24)","Learning Rate":0.01,"MAE":0.0141257993,"MSE":0.0003900669,"Optimizer":"rmsprop","Time":20.1444191933,"Type":"LSTM"}
