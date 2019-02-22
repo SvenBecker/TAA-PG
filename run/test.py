@@ -1,6 +1,9 @@
 import argparse
 import os
 import json
+import sys
+sys.path.append("../")
+
 from collections import namedtuple
 from tensorforce.agents import Agent
 
@@ -34,16 +37,16 @@ def get_defaults():
         return _Defaults(
             data=config.ENV_DATA,
             split=config.TRAIN_SPLIT,
-            agent_config=os.path.join(config.AGENT_CONFIG, 'vpg_gaussian_sb.json'),
+            agent_config=os.path.join(config.AGENT_CONFIG, 'ppo_sb.json'),
             net_config=os.path.join(config.NET_CONFIG, 'mlp3.json'),
             episodes=config.EPISODES,
             horizon=config.HORIZON,
             action_type='signal_softmax',
-            action_space='unbounded',
+            action_space='bounded',
             num_actions=41,
             eval_path=os.path.join(config.RUN_DIR, 'test'),
             verbose=2,
-            load_agent=os.path.join(config.MODEL_DIR, 'saves', 'VPGAgent'),
+            load_agent=os.path.join(config.MODEL_DIR, 'saves', 'PPOAgent'),
             basic_agent=None,
             discrete_states=True,
             standardize_state=False
@@ -224,7 +227,10 @@ class TestAgent(object):
         return test, scaler
 
     def run(self):
-        from run.runner import Runner
+        try:
+            from run.runner import Runner
+        except ModuleNotFoundError:
+            from runner import Runner
 
         run_test = Runner(
             self.agent,
