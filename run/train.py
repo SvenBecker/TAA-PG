@@ -1,6 +1,9 @@
 import argparse
 import os
 import json
+import sys
+sys.path.append("../")
+
 from multiprocessing import cpu_count
 from collections import namedtuple
 from tensorforce.agents import agents as AgentsDictionary, Agent
@@ -40,14 +43,14 @@ def get_defaults():
             data=config.ENV_DATA,
             split=config.TRAIN_SPLIT,
             threaded=False,
-            agent_config=os.path.join(config.AGENT_CONFIG, 'vpg_gaussian_sb.json'),
+            agent_config=os.path.join(config.AGENT_CONFIG, 'ppo_sb.json'),
             net_config=os.path.join(config.NET_CONFIG, 'mlp3.json'),
             num_worker=None,
             epochs=config.EPOCHS,
             episodes=config.EPISODES,
             horizon=config.HORIZON,
             action_type='signal_softmax',
-            action_space='unbounded',                 # 'discrete', 'bounded', 'unbounded'
+            action_space='bounded',                 # 'discrete', 'bounded', 'unbounded'
             num_actions=41,
             model_path=os.path.join(config.MODEL_DIR, 'saves'),
             eval_path=os.path.join(config.RUN_DIR, 'train'),
@@ -270,7 +273,10 @@ class TrainAgent(object):
         return train, scaler
 
     def run_single(self):
-        from run.runner import Runner
+        try:
+            from run.runner import Runner
+        except ModuleNotFoundError:
+            from runner import Runner
 
         run = Runner(
             self.agent,
@@ -293,7 +299,10 @@ class TrainAgent(object):
     def run_threaded(self):
         import config
         from copy import deepcopy
-        from run.runner import ThreadedRunner
+        try:
+            from run.runner import ThreadedRunner
+        except ModuleNotFoundError:
+            from runner import ThreadedRunner
 
         from model.worker import build_worker
 
