@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+run/board/*
 
 # C extensions
 *.so
