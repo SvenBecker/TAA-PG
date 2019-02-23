@@ -132,6 +132,11 @@ class TestAgent(object):
 
     def __init__(self, info):
         self.args = info
+        if not os.path.isdir("tmp"):
+            try:
+                os.mkdir("tmp", 0o755)
+            except OSError:
+                raise OSError("Cannot create directory `tmp`")
         self.logger = get_logger(filename='tmp/test.log', logger_name='TestLogger')
         self.logger.debug(self.args)
 

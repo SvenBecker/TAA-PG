@@ -38,6 +38,11 @@ _Defaults = namedtuple('Defaults', [
 
 
 def get_defaults():
+    if not os.path.isdir("../model/saves"):
+        try:
+            os.mkdir("../model/saves", 0o755)
+        except OSError:
+            raise OSError("Cannot create directory `saves`")
     try:
         return _Defaults(
             data=config.ENV_DATA,
@@ -138,8 +143,12 @@ def get_args(default):
 class TrainAgent(object):
 
     def __init__(self, arguments):
-        import config
         self.args = arguments
+        if not os.path.isdir("tmp"):
+            try:
+                os.mkdir("tmp", 0o755)
+            except OSError:
+                raise OSError("Cannot create directory `tmp`")
         self.logger = get_logger(filename='tmp/train.log', logger_name='TrainLogger')
         self.logger.debug(self.args)
 
